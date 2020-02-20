@@ -42,6 +42,7 @@ public class ReadFile {
                 Library library = new Library();
                 library.id = libId++;
                 line = sCurrentLine.split(SEPARATOR);
+                System.out.println(sCurrentLine);
 
                 library.booksAmount = Integer.parseInt(line[0]);
                 library.signUpProcess = Integer.parseInt(line[1]);
@@ -55,7 +56,7 @@ public class ReadFile {
                     booksIds[i] = Integer.parseInt(line[i]);
                 }
                 final Integer[] sorted = IntStream.range(0, booksIds.length)
-                    .mapToObj(i -> new BoostString(booksIds[i], scores[i])) // Create the instance
+                    .mapToObj(i -> new BoostString(booksIds[i], scores[booksIds[i]])) // Create the instance
                     .sorted(Comparator.comparingInt(b -> -b.score))         // Sort using a Comparator
                     .map(b -> b.bookId)                                     // Map it back to a string
                     .toArray(Integer[]::new);

@@ -39,7 +39,7 @@ public class Solver {
 
     books.removeAll(processBooks);
 
-    int bookProcessCount = Integer.min(books.size(), lib.booksPerDay * (baseInfo.days - lib.signUpProcess));
+    int bookProcessCount = Integer.min(books.size(), lib.booksPerDay * (Integer.min(baseInfo.days - lib.signUpProcess, 0)));
 
     processBooks.addAll(books.subList(0, bookProcessCount));
 

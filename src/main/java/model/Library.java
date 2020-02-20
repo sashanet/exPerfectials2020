@@ -5,6 +5,7 @@ package model;
  */
 public class Library {
 
+    public int id;
     public int booksAmount;
     public int signUpProcess;
     public int booksPerDay;

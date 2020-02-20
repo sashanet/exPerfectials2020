@@ -14,7 +14,8 @@ public class SaveFile {
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("result.txt"))) {
 
-            writer.append(String.valueOf(result.getLibrariesToBooks().size())).append("\n");
+            writer.append(String.valueOf(result.getLibrariesToBooks().size()));
+            writer.newLine();
 
             for (Map.Entry<Integer, List<Integer>> entry : result.getLibrariesToBooks().entrySet()) {
 

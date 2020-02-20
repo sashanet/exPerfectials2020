@@ -37,10 +37,10 @@ public class ReadFile {
                 scores[i] = Integer.parseInt(line[i]);
             }
             baseInfo.scores =  scores;
-
+            int libId = 0;
             while ((sCurrentLine = br.readLine()) != null) {
                 Library library = new Library();
-
+                library.id = libId++;
                 line = sCurrentLine.split(SEPARATOR);
 
                 library.booksAmount = Integer.parseInt(line[0]);

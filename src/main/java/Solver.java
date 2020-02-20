@@ -66,7 +66,7 @@ public class Solver {
 
     int sum = 0;
     daysToProcess--;
-    for (int i = 0; i < daysToProcess; i++) {
+    for (int i = 0; i < Integer.min(daysToProcess, booksIds.length); i++) {
 
       sum += scores[booksIds[i]];
     }

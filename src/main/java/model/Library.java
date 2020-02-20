@@ -6,5 +6,5 @@ package model;
 public class Library {
     public int signUpProcess;
     public int booksPerDay;
-    public int[] scores;
+    public int[] booksIds;
 }

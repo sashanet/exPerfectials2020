@@ -22,11 +22,12 @@ public class ReadFile {
             String [] line = sCurrentLine.split(SEPARATOR);
             baseInfo.books = Integer.parseInt(line[0]);
             baseInfo.libraries = Integer.parseInt(line[1]);
-            baseInfo.days = Integer.parseInt(line[1]);
+            baseInfo.days = Integer.parseInt(line[2]);
             while ((sCurrentLine = br.readLine()) != null) {
 
                 line = sCurrentLine.split(SEPARATOR);
-
+               /* int [] scores
+                for()*/
 
 
             }

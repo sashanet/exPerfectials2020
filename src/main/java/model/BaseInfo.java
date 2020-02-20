@@ -15,4 +15,5 @@ public class BaseInfo {
     public int [] scores;
     public List<Library> libraryList;
 
+    public Integer[] sortedBooks;
 }

@@ -10,9 +10,9 @@ import java.util.stream.Collectors;
  */
 public class SaveFile {
 
-    public static void save(Result result) {
+    public static void save(String FILENAME, Result result) {
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("result.txt"))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("out_"+FILENAME))) {
 
             writer.append(String.valueOf(result.getLibrariesToBooks().size()));
             writer.newLine();

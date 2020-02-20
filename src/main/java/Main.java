@@ -9,8 +9,9 @@ public class Main {
         String FILENAME = "a_example.txt";
         ReadFile readFile = new ReadFile();
         BaseInfo info = readFile.readFile(FILENAME);
-        Result result = new Solver().solve(readFile);
+        int a =0;
+     //   Result result = new Solver().solve(readFile);
 
-        SaveFile.save(result);
+      // SaveFile.save(result);
     }
 }

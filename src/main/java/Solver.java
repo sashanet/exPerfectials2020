@@ -37,7 +37,7 @@ public class Solver {
     return 1.0 * booksValue/deliveryDays;
   }
 
-  private int countBooksValue(int[] booksIds, int[] scores) {
+  private int countBooksValue(Integer[] booksIds, int[] scores) {
     int sum = 0;
     for (int id : booksIds) {
       sum += scores[id];

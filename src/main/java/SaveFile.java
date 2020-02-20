@@ -7,7 +7,7 @@ import java.io.IOException;
  */
 public class SaveFile {
 
-    public static void save() {
+    public static void save(Result result) {
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("result.txt"))) {
             writer.append("line");

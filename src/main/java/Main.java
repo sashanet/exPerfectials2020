@@ -7,8 +7,8 @@ public class Main {
         String FILENAME = "a_example.in";
         ReadFile readFile = new ReadFile();
         readFile.readFile(FILENAME);
+        Result result = new Solver().solve(readFile);
 
-
-        SaveFile.save();
+        SaveFile.save(result);
     }
 }

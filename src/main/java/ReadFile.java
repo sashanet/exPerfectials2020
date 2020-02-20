@@ -48,7 +48,7 @@ public class ReadFile {
                 sCurrentLine = br.readLine();
                 line = sCurrentLine.split(SEPARATOR);
                 int [] booksIds = new int [line.length];
-                for(int i = 0; i<line.length-1; i++){
+                for(int i = 0; i<line.length; i++) {
                     booksIds[i] = Integer.parseInt(line[i]);
                 }
                 library.booksIds = booksIds;

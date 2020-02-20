@@ -13,12 +13,16 @@ public class Solver {
     Result result = new Result();
 
     Set<Library> libraries = sort(baseInfo);
-
     for (Library lib: libraries) {
-
-
+      if (lib.signUpProcess < daysForScan) {
+        addLibrary(result, lib, baseInfo.scores);
+      }
     }
-    return null;
+    return result;
+  }
+
+  private void addLibrary(Result result, Library lib, int[] scores) {
+
   }
 
   private Set<Library> sort(BaseInfo baseInfo){

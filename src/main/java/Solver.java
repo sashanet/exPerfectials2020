@@ -36,7 +36,7 @@ public class Solver {
 
     private void addLibrary(LinkedHashMap<Integer, List<Integer>> result, Library lib) {
 
-        List<Integer> books = IntStream.of(lib.booksIds).boxed().collect(Collectors.toList());
+        List<Integer> books = Stream.of(lib.booksIds).collect(Collectors.toList());
 
         books.removeAll(processBooks);
 
@@ -63,7 +63,7 @@ public class Solver {
         return 1.0 * booksValue / deliveryDays;
     }
 
-    private int countBooksValue(int[] booksIds, int[] scores, int daysToProcess) {
+    private int countBooksValue(Integer[] booksIds, int[] scores, int daysToProcess) {
 
         int sum = 0;
         daysToProcess--;
